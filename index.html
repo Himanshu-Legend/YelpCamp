@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YelpCamp : Find Best Camps!</title>
+    <link rel="icon" type="image/png" href="https://a0.muscache.com/airbnb/static/logotype_favicon-21cc8e6c6a2cca43f061d2dcabdf6e58.ico"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <section class="container">
+       <div class="navbar">
+           <img class="logo" src="https://a0.muscache.com/airbnb/static/logotype_favicon-21cc8e6c6a2cca43f061d2dcabdf6e58.ico" alt="">
+           <a href="#" class="signupbtn">Sign Up</a>
+       </div>
+       <div class="main">
+           <small>Welcome to,</small>
+           <h1 class="specioh1">YelpCamp</h1>
+           <small>Here you will find the best campgrounds around the world.</small>
+           <div class="inpcontainer">
+               <form action="/campgrounds" method="get" id="searchform">
+                    <input class="inp"type="text" placeholder="Search Campground - Click the Icon" required>
+                    <!-- <a href="/campgrounds" class="speciolink" ><i class="fa fa-search searchico"></i></a>    -->
+                    <button class="speciobtn"><i class="fa fa-search searchico"></i></button>
+               </form>
+           </div>
+           
+       </div>
+    </section>
+    <section class="content">
+        <div class="main02">
+            <h2 class="specioh2">BitCoin Deposit Address</h2>
+            <div class="inpcontainer02">
+                <input type="text" class="inp02" id="myinput" disabled value="3kp3ng4oe0a64vd9s6dsd3d8sd65hss85sv3kw3wd9vs06s6lj">
+                <button onclick="btc() ,alert0()" class="copy-btc-addr">Copy</button>
+            </div>
+            <div class="msgx">
+                <h3 class="impmsg">
+                    IMPORTANT: Bitcoin(btc) can only be sent from address
+                    <br>
+                    which has been pre-registered
+            </div>
+            <div class="hr">
+                <hr>
+            </div>
+            <div class="msg">
+               
+                    <p class="impmsg" style="margin-top: 0;">
+                        Any attempt to send BTC from an exchange(such as Coibase, Kraken, Polioniex, etc.)
+                        <br>
+                        during thr sale will result in an inability to book Campgrounds, and you BTC maybe permananently lost.
+                    </p>
+                
+            </div>
+            
+        </div> 
+    </section>
+    <footer class="footer">
+        <div class="container02">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>YelpCamp</h4>
+                    <ul>
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Our Services</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                        <li><a href="">Sign In</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get Help</h4>
+                    <ul>
+                        <li><a href="">FAQ</a></li>
+                        <li><a href="">Watch</a></li>
+                        <li><a href="">Blogs</a></li>
+                        <li><a href="">Campgrounds</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f specio-link"></i></a>
+                        <a href="https://www.twitter.com"><i class="fa-brands fa-twitter specio-link"></i></a>
+                        <a href="https://www.instagram.com"><i class="fa-brands fa-instagram specio-link"></i></a>
+                        <a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin specio-link"></i></a> 
+                    </div>                       
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function btc(){
+            var copytxt = document.getElementById("myinput");
+
+            copytxt.select();
+            copytxt.setSelectionRange(0, 99999);
+
+            navigator.clipboard.writeText(copytxt.value)
+
+        }
+
+        function alert0(){
+            var alert = document.getElementById("alert")
+
+            alert.style.display = 'flex';
+        }
+        
+    </script>
+</body>
+</html>
